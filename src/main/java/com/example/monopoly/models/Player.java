@@ -13,6 +13,7 @@ import java.util.List;
 @Entity
 @Data
 public class Player {
+    private int money;
     private int number;
     private String name;
     private Color color;
