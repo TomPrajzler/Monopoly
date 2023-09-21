@@ -1,9 +1,6 @@
 package com.example.monopoly.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
@@ -11,10 +8,9 @@ import java.util.List;
 @Entity
 @Data
 public class Properties {
-    @OneToOne
-    private Player owner;
     private int price;
-    private List<Integer> upgradePrices;
+    @OneToMany
+    private List<UpgradePrices> upgradePrices;
     private int numberOfHouses;
     @Id
     @GeneratedValue

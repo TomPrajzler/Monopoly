@@ -1,9 +1,6 @@
 package com.example.monopoly.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.awt.*;
@@ -17,8 +14,8 @@ public class Player {
     private int number;
     private String name;
     private Color color;
-    @ManyToOne
-    private Properties properties;
+    @OneToMany
+    private List<Properties> properties;
     @Id
     @GeneratedValue
     private Long id;

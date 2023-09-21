@@ -11,8 +11,8 @@ public class Game {
     @Id
     @GeneratedValue
     private Long id;
-    @ManyToOne
-    private Player player;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Player> player;
 
 
 }
