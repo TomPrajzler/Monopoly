@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class UpgradePrices {
+public class UpgradePrice {
     private int upgradePrice;
     @GeneratedValue
     @Id

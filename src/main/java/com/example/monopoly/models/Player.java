@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.awt.*;
-import java.util.*;
 import java.util.List;
 
 @Entity
@@ -15,7 +14,7 @@ public class Player {
     private String name;
     private Color color;
     @OneToMany
-    private List<Properties> properties;
+    private List<Property> properties;
     @Id
     @GeneratedValue
     private Long id;

@@ -7,10 +7,10 @@ import java.util.List;
 
 @Entity
 @Data
-public class Properties {
+public class Property {
     private int price;
     @OneToMany
-    private List<UpgradePrices> upgradePrices;
+    private List<UpgradePrice> upgradePrices;
     private int numberOfHouses;
     @Id
     @GeneratedValue
