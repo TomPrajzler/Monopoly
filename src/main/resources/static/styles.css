@@ -149,15 +149,24 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 1;
     grid-row: 2 / 11;
 }
+.left-row .container{
+    transform: translate(28%, -18%) rotate(90deg);
+}
 
 .top-row {
     grid-column: 2 / 11;
     grid-row: 1;
 }
+.top-row .container{
+    transform: rotate(180deg);
+}
 
 .right-row {
     grid-column: 11;
     grid-row: 2 / 11;
+}
+.right-row .container{
+    transform: translate(28%, -18%) rotate(270deg);
 }
 
 /* SPACES */
@@ -437,7 +446,6 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 5px;
 }
 
-/* Luxury Tax */
 .luxury-tax .drawing {
     font-size: 50px;
 }
@@ -446,7 +454,6 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 5px;
 }
 
-/* UTILITY */
 .long-name {
     padding-left: 0 !important;
     padding-right: 0 !important;
