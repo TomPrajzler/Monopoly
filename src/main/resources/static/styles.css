@@ -45,14 +45,37 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Property colors */
 
-.dark-purple { background: #5e3577; }
-.light-blue  { background: #d2eaf5; }
-.purple      { background: #b02f7c; }
-.orange      { background: #fa811d; }
-.red         { background: #f50c2b; }
-.yellow      { background: #ffed20; }
-.green       { background: #41994e; }
-.dark-blue   { background: #5a6dba; }
+.dark-purple {
+    background: #5e3577;
+}
+
+.light-blue {
+    background: #d2eaf5;
+}
+
+.purple {
+    background: #b02f7c;
+}
+
+.orange {
+    background: #fa811d;
+}
+
+.red {
+    background: #f50c2b;
+}
+
+.yellow {
+    background: #ffed20;
+}
+
+.green {
+    background: #41994e;
+}
+
+.dark-blue {
+    background: #5a6dba;
+}
 
 /* LAYOUT */
 
@@ -149,7 +172,8 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 1;
     grid-row: 2 / 11;
 }
-.left-row .container{
+
+.left-row .container {
     transform: translate(28%, -18%) rotate(90deg);
 }
 
@@ -157,7 +181,8 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 2 / 11;
     grid-row: 1;
 }
-.top-row .container{
+
+.top-row .container {
     transform: rotate(180deg);
 }
 
@@ -165,7 +190,8 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 11;
     grid-row: 2 / 11;
 }
-.right-row .container{
+
+.right-row .container {
     transform: translate(28%, -18%) rotate(270deg);
 }
 
@@ -463,35 +489,52 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     top: 5px;
 }
-#red-player{
+
+#red-player {
     background-color: red;
     width: 13px;
     height: 13px;
     border-radius: 13px;
-    position: absolute; left: 25px; bottom: 50px;
+    position: absolute;
+    left: 25px;
+    bottom: 50px;
     border: solid;
 }
-#blue-player{
+
+#blue-player {
     background-color: aqua;
     width: 13px;
     height: 13px;
     border-radius: 13px;
-    position: absolute; left: 45px; bottom: 50px;
+    position: absolute;
+    left: 45px;
+    bottom: 50px;
     border: solid;
 }
-#yellow-player{
+
+#yellow-player {
     background-color: yellow;
     width: 13px;
     height: 13px;
     border-radius: 13px;
-    position: absolute; left: 25px; bottom: 30px;
+    position: absolute;
+    left: 25px;
+    bottom: 30px;
     border: solid;
 }
-#black-player{
+
+#black-player {
     background-color: chartreuse;
     width: 13px;
     height: 13px;
     border-radius: 13px;
-    position: absolute; left: 45px; bottom: 30px;
+    position: absolute;
+    left: 45px;
+    bottom: 30px;
     border: solid;
+}
+
+#dice1, #dice2{
+    height: 100px;
+    width: 100px;
 }
