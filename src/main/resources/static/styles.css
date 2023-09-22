@@ -463,3 +463,35 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     top: 5px;
 }
+#red-player{
+    background-color: red;
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    position: absolute; left: 25px; bottom: 50px;
+    border: solid;
+}
+#blue-player{
+    background-color: aqua;
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    position: absolute; left: 45px; bottom: 50px;
+    border: solid;
+}
+#yellow-player{
+    background-color: yellow;
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    position: absolute; left: 25px; bottom: 30px;
+    border: solid;
+}
+#black-player{
+    background-color: chartreuse;
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    position: absolute; left: 45px; bottom: 30px;
+    border: solid;
+}
