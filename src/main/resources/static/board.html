@@ -22,7 +22,7 @@
 
         <div class="space corner go">
             <div class="container">
-                <div class="instructions">Při průchodu startem si vezmi 20 000</div>
+                <div class="instructions" id="0">Při průchodu startem si vezmi 20 000</div>
                 <div class="go-word">go</div>
             </div>
             <div class="arrow fa fa-long-arrow-left"></div>
@@ -32,7 +32,7 @@
             <div class="space property">
                 <div class="container">
                     <div class="color-bar light-blue"></div>
-                    <div class="name long-name">VINOHRADSKÁ ULICE</div>
+                    <div class="name long-name" id="9">VINOHRADSKÁ ULICE</div>
 
                     <div class="price">PRICE $120</div>
                 </div>
@@ -40,33 +40,33 @@
             <div class="space property">
                 <div class="container">
                     <div class="color-bar light-blue"></div>
-                    <div class="name">JINDŘIŠSKÁ ULICE</div>
+                    <div class="name" id="8">JINDŘIŠSKÁ ULICE</div>
                     <div class="price">Price $100</div>
                 </div>
             </div>
             <div class="space chance">
                 <div class="container">
-                    <div class="name">ŠANCE</div>
+                    <div class="name" id="7">ŠANCE</div>
                     <i class="drawing fa fa-question"></i>
                 </div>
             </div>
             <div class="space property">
                 <div class="container">
                     <div class="color-bar light-blue"></div>
-                    <div class="name">PANSKÁ ULICE</div>
+                    <div class="name" id="6">PANSKÁ ULICE</div>
                     <div class="price">Price $100</div>
                 </div>
             </div>
             <div class="space railroad">
                 <div class="container">
-                    <div class="name">WILSONOVO NÁDRAŽÍ</div>
+                    <div class="name" id="5">WILSONOVO NÁDRAŽÍ</div>
                     <i class="drawing fa fa-subway"></i>
                     <div class="price">Price $200</div>
                 </div>
             </div>
             <div class="space fee income-tax">
                 <div class="container">
-                    <div class="name">DAŇ Z PŘÍJMU</div>
+                    <div class="name" id="4">DAŇ Z PŘÍJMU</div>
                     <div class="diamond"></div>
                     <div class="instructions">Pay 10%<br>or<br>$200</div>
                 </div>
@@ -74,13 +74,13 @@
             <div class="space property">
                 <div class="container">
                     <div class="color-bar dark-purple"></div>
-                    <div class="name">REVOLUČNÍ ULICE</div>
+                    <div class="name" id="3">REVOLUČNÍ ULICE</div>
                     <div class="price">Price $50</div>
                 </div>
             </div>
             <div class="space community-chest">
                 <div class="container">
-                    <div class="name">POKLADNA</div>
+                    <div class="name" id="2">POKLADNA</div>
                     <i class="drawing fa fa-cube"></i>
                     <div class="instructions">Follow instructions on top card</div>
                 </div>
@@ -88,14 +88,14 @@
             <div class="space property">
                 <div class="container">
                     <div class="color-bar dark-purple"></div>
-                    <div class="name">KLIMENTSKÁ ULICE</div>
+                    <div class="name" id="1">KLIMENTSKÁ ULICE</div>
                     <div class="price">Price $50</div>
                 </div>
             </div>
         </div>
 
         <div class="space corner jail">
-            <div class="just">Na</div>
+            <div class="just" id="10">Na</div>
             <div class="drawing">
                 <div class="container">
                     <div class="name">Ve</div>
@@ -105,30 +105,34 @@
                         <div class="bar"></div>
                         <i class="person fa fa-frown-o"></i>
                     </div>
-                    <div class="name">Vězení</div>
+                    <div class="name" id="66">Vězení</div>
+                    <div id="red-player"></div>
+                    <div id="blue-player"></div>
+                    <div id="yellow-player"></div>
+                    <div id="black-player"></div>
                 </div>
             </div>
-            <div class="visiting">návštěvě</div>
+            <div class="visiting" id="10">návštěvě</div>
         </div>
 
         <div class="row vertical-row left-row">
             <div class="space property">
                 <div class="container">
                     <div class="color-bar orange"></div>
-                    <div class="name">VODIČKOVA ULICE</div>
+                    <div class="name" id="19">VODIČKOVA ULICE</div>
                     <div class="price">Price $200</div>
                 </div>
             </div>
             <div class="space property">
                 <div class="container">
                     <div class="color-bar orange"></div>
-                    <div class="name long-name">JUNGMANNOVA ULICE</div>
+                    <div class="name long-name" id="18">JUNGMANNOVA ULICE</div>
                     <div class="price">Price $180</div>
                 </div>
             </div>
             <div class="space community-chest">
                 <div class="container">
-                    <div class="name">POKLADNA</div>
+                    <div class="name" id="17">POKLADNA</div>
                     <i class="drawing fa fa-cube"></i>
                     <div class="instructions">Follow instructions on top card</div>
                 </div>
@@ -136,13 +140,13 @@
             <div class="space property">
                 <div class="container">
                     <div class="color-bar orange"></div>
-                    <div class="name">NÁRODNÍ TŘÍDA</div>
+                    <div class="name" id="16">NÁRODNÍ TŘÍDA</div>
                     <div class="price">Price $180</div>
                 </div>
             </div>
             <div class="space railroad">
                 <div class="container">
-                    <div class="name long-name">SMÍCHOVSKÉ NÁDRAŽÍ</div>
+                    <div class="name long-name" id="15">SMÍCHOVSKÉ NÁDRAŽÍ</div>
                     <i class="drawing fa fa-subway"></i>
                     <div class="price">Price $200</div>
                 </div>
@@ -150,20 +154,20 @@
             <div class="space property">
                 <div class="container">
                     <div class="color-bar purple"></div>
-                    <div class="name">SMETANOVO NÁBŘEŽÍ</div>
+                    <div class="name" id="14">SMETANOVO NÁBŘEŽÍ</div>
                     <div class="price">Price $160</div>
                 </div>
             </div>
             <div class="space property">
                 <div class="container">
                     <div class="color-bar purple"></div>
-                    <div class="name long-name">MASARYKOVO NÁBŘEŽÍ</div>
+                    <div class="name long-name" id="13">MASARYKOVO NÁBŘEŽÍ</div>
                     <div class="price">Price $140</div>
                 </div>
             </div>
             <div class="space utility electric-company">
                 <div class="container">
-                    <div class="name">ELEKTRICKÉ ZÁVODY</div>
+                    <div class="name" id="12">ELEKTRICKÉ ZÁVODY</div>
                     <i class="drawing fa fa-lightbulb-o"></i>
                     <div class="price">Price $150</div>
                 </div>
@@ -171,11 +175,7 @@
             <div class="space property">
                 <div class="container">
                     <div class="color-bar purple"></div>
-                    <div class="name">RAŠÍNOVO NÁBŘEŽÍ</div>
-                    <div id="red-player"></div>
-                    <div id="blue-player"></div>
-                    <div id="yellow-player"></div>
-                    <div id="black-player"></div>
+                    <div class="name" id="11">RAŠÍNOVO NÁBŘEŽÍ</div>
                     <div class="price">Price $140</div>
                 </div>
             </div>
@@ -183,7 +183,7 @@
 
         <div class="space corner free-parking">
             <div class="container">
-                <div class="name">PARKOVÁNÍ</div>
+                <div class="name" id="20">PARKOVÁNÍ</div>
                 <i class="drawing fa fa-car"></i>
                 <div class="name">ZDARMA</div>
             </div>
@@ -193,33 +193,33 @@
             <div class="space property">
                 <div class="container">
                     <div class="color-bar red"></div>
-                    <div class="name">RYTÍŘŠKÁ ULICE</div>
+                    <div class="name" id="21">RYTÍŘŠKÁ ULICE</div>
                     <div class="price">Price $220</div>
                 </div>
             </div>
             <div class="space chance">
                 <div class="container">
-                    <div class="name">ŠANCE</div>
+                    <div class="name" id="22">ŠANCE</div>
                     <i class="drawing fa fa-question blue"></i>
                 </div>
             </div>
             <div class="space property">
                 <div class="container">
                     <div class="color-bar red"></div>
-                    <div class="name">OVOCNÝ TRH</div>
+                    <div class="name" id="23">OVOCNÝ TRH</div>
                     <div class="price">Price $220</div>
                 </div>
             </div>
             <div class="space property">
                 <div class="container">
                     <div class="color-bar red"></div>
-                    <div class="name">NA PŘÍKOPECH</div>
+                    <div class="name" id="24">NA PŘÍKOPECH</div>
                     <div class="price">Price $200</div>
                 </div>
             </div>
             <div class="space railroad">
                 <div class="container">
-                    <div class="name">NÁDRAŽÍ HOLEŠOVICE</div>
+                    <div class="name" id="25">NÁDRAŽÍ HOLEŠOVICE</div>
                     <i class="drawing fa fa-subway"></i>
                     <div class="price">Price $200</div>
                 </div>
@@ -227,20 +227,20 @@
             <div class="space property">
                 <div class="container">
                     <div class="color-bar yellow"></div>
-                    <div class="name">PAŘÍŽSKÁ ULICE</div>
+                    <div class="name" id="26">PAŘÍŽSKÁ ULICE</div>
                     <div class="price">Price $260</div>
                 </div>
             </div>
             <div class="space property">
                 <div class="container">
                     <div class="color-bar yellow"></div>
-                    <div class="name">CELETNÁ ULICE</div>
+                    <div class="name" id="27">CELETNÁ ULICE</div>
                     <div class="price">Price $260</div>
                 </div>
             </div>
             <div class="space utility waterworks">
                 <div class="container">
-                    <div class="name">VODÁRNY</div>
+                    <div class="name" id="28">VODÁRNY</div>
                     <i class="drawing fa fa-tint"></i>
                     <div class="price">Price $120</div>
                 </div>
@@ -248,7 +248,7 @@
             <div class="space property">
                 <div class="container">
                     <div class="color-bar yellow"></div>
-                    <div class="name">NÁMĚSTÍ REPULIKY</div>
+                    <div class="name" id="29">NÁMĚSTÍ REPULIKY</div>
                     <div class="price">Price $280</div>
                 </div>
             </div>
@@ -256,7 +256,7 @@
 
         <div class="space corner go-to-jail">
             <div class="container">
-                <div class="name">JDI DO</div>
+                <div class="name" id="30">JDI DO</div>
                 <i class="drawing fa fa-gavel"></i>
                 <div class="name">VĚZENÍ</div>
             </div>
@@ -266,20 +266,20 @@
             <div class="space property">
                 <div class="container">
                     <div class="color-bar green"></div>
-                    <div class="name long-name">MALOSTRANSKÉ NÁMĚSTÍ</div>
+                    <div class="name long-name" id="31">MALOSTRANSKÉ NÁMĚSTÍ</div>
                     <div class="price">Price $300</div>
                 </div>
             </div>
             <div class="space property">
                 <div class="container">
                     <div class="color-bar green"></div>
-                    <div class="name">KAMPA</div>
+                    <div class="name" id="32">KAMPA</div>
                     <div class="price">Price $300</div>
                 </div>
             </div>
             <div class="space community-chest">
                 <div class="container">
-                    <div class="name">POKLADNA</div>
+                    <div class="name" id="33">POKLADNA</div>
                     <i class="drawing fa fa-cube"></i>
                     <div class="instructions">Follow instructions on top card</div>
                 </div>
@@ -287,33 +287,33 @@
             <div class="space property">
                 <div class="container">
                     <div class="color-bar green"></div>
-                    <div class="name long-name">KARLOVA ULICE</div>
+                    <div class="name long-name" id="34">KARLOVA ULICE</div>
                     <div class="price">Price $320</div>
                 </div>
             </div>
             <div class="space railroad">
                 <div class="container">
-                    <div class="name long-name">MASARYKOVO NÁDRAŽÍ</div>
+                    <div class="name long-name" id="35">MASARYKOVO NÁDRAŽÍ</div>
                     <i class="drawing fa fa-subway"></i>
                     <div class="price">Price $200</div>
                 </div>
             </div>
             <div class="space chance">
                 <div class="container">
-                    <div class="name">ŠANCE</div>
+                    <div class="name" id="36">ŠANCE</div>
                     <i class="drawing fa fa-question"></i>
                 </div>
             </div>
             <div class="space property">
                 <div class="container">
                     <div class="color-bar dark-blue"></div>
-                    <div class="name long-name">STAROMĚSTKÉ NÁMĚSTÍ</div>
+                    <div class="name long-name" id="37">STAROMĚSTKÉ NÁMĚSTÍ</div>
                     <div class="price">Price $350</div>
                 </div>
             </div>
             <div class="space fee luxury-tax">
                 <div class="container">
-                    <div class="name">DAŇ</div>
+                    <div class="name" id="38">DAŇ</div>
                     <div class="drawing fa fa-diamond"></div>
                     <div class="instructions">Pay $75.00</div>
                 </div>
@@ -321,7 +321,7 @@
             <div class="space property">
                 <div class="container">
                     <div class="color-bar dark-blue"></div>
-                    <div class="name">VÁCLAVSKÉ NÁMĚSTÍ</div>
+                    <div class="name" id="39">VÁCLAVSKÉ NÁMĚSTÍ</div>
                     <div class="price">Price $400</div>
                 </div>
             </div>
