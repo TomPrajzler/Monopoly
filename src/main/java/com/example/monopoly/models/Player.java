@@ -18,6 +18,7 @@ public class Player {
     private int balance;
     @OneToMany
     private List<Property> properties;
+    private int position;
 
     public void upgradeProperty(Property property, int balance){
         if(balance >= property.getUpgrade()*3 && property.getNumberOfHouses() < 4){
