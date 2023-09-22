@@ -47,22 +47,40 @@ const bluePlayer = document.getElementById("blue-player");
 const yellowPlayer = document.getElementById("yellow-player");
 const greenPlayer = document.getElementById("green-player");
 let playerRed = {
-   position : 0,
-    element : redPlayer
+    position: 0,
+    element: redPlayer
 }
 let playerBlue = {
-    position : 0,
+    position: 0,
     element: bluePlayer
 }
 let playerYellow = {
-    position : 0,
-    element : yellowPlayer
+    position: 0,
+    element: yellowPlayer
 }
 let playerGreen = {
-    position : 0,
-    element : greenPlayer
+    position: 0,
+    element: greenPlayer
 }
 let playerOnTurn = playerRed;
+
+function nextPlayer() {
+    if (playerOnTurn === playerRed) {
+        playerOnTurn = playerBlue;
+    } else if (playerOnTurn === playerBlue) {
+        playerOnTurn = playerYellow;
+    } else if (playerOnTurn === playerYellow) {
+        playerOnTurn = playerGreen;
+    } else if (playerOnTurn === playerGreen) {
+        playerOnTurn = playerRed;
+    }
+}
+
+function movePlayer() {
+    playerOnTurn.element.remove();
+    let positionElement = document.getElementById(playerOnTurn.position.toString());
+    positionElement.append(playerOnTurn.element);
+}
 
 roll.addEventListener("click", () => {
     fetch("/game/roll")
@@ -71,25 +89,42 @@ roll.addEventListener("click", () => {
             dice1.src = `dice${data.first}.png`;
             dice2.src = `dice${data.second}.png`;
             const sum = data.first + data.second;
-            if(playerOnTurn.position + sum < 40){
-                playerOnTurn.position += sum;
-            }else{
-                playerOnTurn.position = playerOnTurn.position + sum -40;
+            let counter = 0;
+            if (playerOnTurn.position === 66) {
+                if (data.first === data.second) {
+                    playerOnTurn.position = 10;
+                    playerOnTurn.jailTurns = 0;
+                } else {
+                    playerOnTurn.jailTurns++;
+                    if (playerOnTurn.jailTurns === 3) {
+                        playerOnTurn.position = 10;
+                        playerOnTurn.jailTurns = 0;
+                    }
+                }
+            } else {
+                if (playerOnTurn.position + sum < 40) {
+                    playerOnTurn.position += sum;
+                } else {
+                    playerOnTurn.position = playerOnTurn.position + sum - 40;
+                }
+                if (playerOnTurn.position === 30) {
+                    playerOnTurn.position = 66;
+                }
             }
-            playerOnTurn.element.remove();
-            let positionElement = document.getElementById(playerOnTurn.position.toString());
-            positionElement.append(playerOnTurn.element);
-            if(playerOnTurn === playerRed){
-                playerOnTurn = playerBlue;
-            } else if(playerOnTurn === playerBlue){
-                playerOnTurn = playerYellow;
-            } else if(playerOnTurn === playerYellow){
-                playerOnTurn = playerGreen;
-            }else if(playerOnTurn === playerGreen){
-                playerOnTurn = playerRed;
+            movePlayer();
+            if (data.first !== data.second) {
+                nextPlayer();
+                counter = 0;
+            } else {
+                counter++;
+            }
+            if (counter === 3) {
+                playerOnTurn.position = 66;
+                movePlayer()
+                nextPlayer();
             }
         })
         .catch(error => {
             console.error("Error fetching data:", error);
-        });
+        })
 });
