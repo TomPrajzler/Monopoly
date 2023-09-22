@@ -46,6 +46,23 @@ const redPlayer = document.getElementById("red-player");
 const bluePlayer = document.getElementById("blue-player");
 const yellowPlayer = document.getElementById("yellow-player");
 const greenPlayer = document.getElementById("green-player");
+let playerRed = {
+   position : 0,
+    element : redPlayer
+}
+let playerBlue = {
+    position : 0,
+    element: bluePlayer
+}
+let playerYellow = {
+    position : 0,
+    element : yellowPlayer
+}
+let playerGreen = {
+    position : 0,
+    element : greenPlayer
+}
+let playerOnTurn = playerRed;
 
 roll.addEventListener("click", () => {
     fetch("/game/roll")
@@ -53,6 +70,24 @@ roll.addEventListener("click", () => {
         .then(data => {
             dice1.src = `dice${data.first}.png`;
             dice2.src = `dice${data.second}.png`;
+            const sum = data.first + data.second;
+            if(playerOnTurn.position + sum < 40){
+                playerOnTurn.position += sum;
+            }else{
+                playerOnTurn.position = playerOnTurn.position + sum -40;
+            }
+            playerOnTurn.element.remove();
+            let positionElement = document.getElementById(playerOnTurn.position.toString());
+            positionElement.append(playerOnTurn.element);
+            if(playerOnTurn === playerRed){
+                playerOnTurn = playerBlue;
+            } else if(playerOnTurn === playerBlue){
+                playerOnTurn = playerYellow;
+            } else if(playerOnTurn === playerYellow){
+                playerOnTurn = playerGreen;
+            }else if(playerOnTurn === playerGreen){
+                playerOnTurn = playerRed;
+            }
         })
         .catch(error => {
             console.error("Error fetching data:", error);
